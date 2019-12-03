@@ -92,3 +92,9 @@ Step 7. Git Repo
 4. paste the ssh url key
 
 This should get you up and running!
+
+
+A couple of links where I found info:
+
+https://happygitwithr.com/ssh-keys.html
+https://stackoverflow.com/questions/55929757/installing-r-3-6-on-ubuntu-disco-19-04
