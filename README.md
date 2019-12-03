@@ -98,3 +98,12 @@ A couple of links where I found info:
 
 https://happygitwithr.com/ssh-keys.html
 https://stackoverflow.com/questions/55929757/installing-r-3-6-on-ubuntu-disco-19-04
+
+Step Annoying and AVOID:
+
+1. if you use rgeos and use the google mapping functions you will need PROTOBUF and PROTOBUF-COMPILER.  To get this in linux and ubunutu 19.10 you must do the following:
+
+1. go to terminal:
+A. sudo apt-get upgrade
+B. sudo snap install protobuf --classic (only after you have run sudo apt-get upgrade)
+C. sudo apt-get install protobuf-compiler (note that you had already installed protobuf in earlier step
