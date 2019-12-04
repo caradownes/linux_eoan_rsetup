@@ -28,6 +28,15 @@ library(tidyverse_pkgs)
 
 NOTE:  It is very important to put quotes around the package names or else you will create a bunch of empty package folders with nothing in them and then get a lot of annoying errors.  You would then need to go through and use terminal to manually add all the missing blank package folders (like "haven" and "readr") -- Essentially without quotes it will try to do what you want and try to install the tidyverse but not succeed completely.
 
+NOTE: run the following to install a messed up package: 
+
+in RStudio
+
+install.packages("Rcpp", dependencies=TRUE, INSTALL_opts = c('--no-lock'))
+
+answer found at:
+https://askubuntu.com/questions/1163130/permission-denied-while-installing-r-package?noredirect=1&lq=1
+
 Step 4: 
 
 If any of those fail, and you see weird things missing that give you error/fails, then open a terminal and start working down this list:
