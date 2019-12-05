@@ -116,3 +116,10 @@ Step Annoying and AVOID:
 A. sudo apt-get upgrade
 B. sudo snap install protobuf --classic (only after you have run sudo apt-get upgrade)
 C. sudo apt-get install protobuf-compiler (note that you had already installed protobuf in earlier step
+
+
+II. Printer Annoyances
+
+Ok, why this is....who knows!  But....
+
+find driver for printer.  Download and install (either terminal or manager) then go to << add printer << add it << then go to additional printer settings and select drivers from list and add.  Then!!! go to settings (still under the additional settings dialog) and change the server to one with an ip address.  as in this link: https://askubuntu.com/questions/1192711/cant-install-epson-et-3750-printer-on-ubuntu-19-10.  This final step where the device url is et to the ip with the PASSTHRU seems to connect everything.  Ugh. Annoying. 1 hr of my life goonnnnne!
