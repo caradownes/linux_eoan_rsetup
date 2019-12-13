@@ -123,3 +123,73 @@ II. Printer Annoyances
 Ok, why this is....who knows!  But....
 
 find driver for printer.  Download and install (either terminal or manager) then go to << add printer << add it << then go to additional printer settings and select drivers from list and add.  Then!!! go to settings (still under the additional settings dialog) and change the server to one with an ip address.  as in this link: https://askubuntu.com/questions/1192711/cant-install-epson-et-3750-printer-on-ubuntu-19-10.  This final step where the device url is et to the ip with the PASSTHRU seems to connect everything.  Ugh. Annoying. 1 hr of my life goonnnnne!
+
+
+III.  Extra Fonts
+
+#extra fonts
+
+
+#https://github.com/yixuan/showtext
+library(showtext)
+font_add_google("Schoolbell", "bell")
+
+set.seed(123)
+## Manually open a graphics device if you run this code in RStudio
+## x11()
+hist(rnorm(1000), breaks = 30, col = "steelblue", border = "white",
+     main = "Histogram of Normal Random Numbers", xlab = "", ylab = "Frequency")
+
+showtext_begin()
+text(2, 70, "N = 1000", family = "bell", cex = 2.5)
+showtext_end()
+
+
+library(showtext)
+## Loading Google fonts (http://www.google.com/fonts)
+font_add_google("Gochi Hand", "gochi")
+font_add_google("Schoolbell", "bell")
+font_add_google("Covered By Your Grace", "grace")
+font_add_google("Rock Salt", "rock")
+
+## Automatically use showtext to render text for future devices
+showtext_auto()
+
+## Tell showtext the resolution of the device,
+## only needed for bitmap graphics. Default is 96
+## showtext_opts(dpi = 96)
+
+set.seed(123)
+x = rnorm(10)
+y = 1 + x + rnorm(10, sd = 0.2)
+y[1] = 5
+mod = lm(y ~ x)
+
+## Plotting functions as usual
+## Open a graphics device if you want, e.g.
+## png("demo.png", 700, 600, res = 96)
+## If you want to show the graph in a window device,
+## remember to manually open one in RStudio
+## See the "Known Issues" section
+x11()
+
+op = par(cex.lab = 2, cex.axis = 1.5, cex.main = 2)
+plot(x, y, pch = 16, col = "steelblue",
+     xlab = "X variable", ylab = "Y variable", family = "gochi")
+grid()
+title("Draw Plots Before You Fit A Regression", family = "bell")
+text(-0.5, 4.5, "This is the outlier", cex = 2, col = "steelblue",
+     family = "grace")
+abline(coef(mod))
+abline(1, 1, col = "red")
+par(family = "rock")
+text(1, 1, expression(paste("True model: ", y == x + 1)),
+     cex = 1.5, col = "red", srt = 20)
+text(0, 2, expression(paste("OLS: ", hat(y) == 0.79 * x + 1.49)),
+     cex = 1.5, srt = 15)
+legend("topright", legend = c("Truth", "OLS"), col = c("red", "black"), lty = 1)
+
+par(op)
+
+
+
