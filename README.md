@@ -134,4 +134,35 @@ III.  Extra Fonts
 library(showtext)
 font_add_google("Schoolbell", "bell")
 
+library(showtext)
+#font_add_google("Schoolbell", "bell")
+#font_add_google("Dancing Script", "Indie Flower")
+#font_add_google("Shadows Into Light", "Permanent Marker")
+#font_add_google("Permanent Marker", "Caveat")
+#font_add_google("Ubuntu Condensed")
+#font_add_google("Gloria Hallelujah", "Luckiest Guy")
+#font_add_google("Bangers", "Marck Script")
+#font_add_google("Covered By Your Grace", "Nanum Pen Script")
+
+
+IV.
+
+Additional tips for tmpap and mapping tools:
+
+#Note: probably need to run 
+      # sudo apt-get install -y libudunits2-dev
+      # in terminal then install each invdividual package in order below
+
+#install.packages("units")
+#install.packages("lwgeom")
+#install.packages("raster")
+#install.packages("stars")
+#install.packages("sf")
+#install.packages("leaflet")
+#install.packages("leafsync")
+#install.packages("leafem")
+#install.packages("tmaptools")
+#install.packages("tmap")
+
+As of Ubuntu 20.04 LTS and RStudio 1.2.5042 and R  4.0.0 you need to run the terminal for libudunits2-dev BEFORE trying to install tmap.  
 
