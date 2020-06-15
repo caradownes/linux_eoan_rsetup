@@ -124,6 +124,10 @@ Ok, why this is....who knows!  But....
 
 find driver for printer.  Download and install (either terminal or manager) then go to << add printer << add it << then go to additional printer settings and select drivers from list and add.  Then!!! go to settings (still under the additional settings dialog) and change the server to one with an ip address.  as in this link: https://askubuntu.com/questions/1192711/cant-install-epson-et-3750-printer-on-ubuntu-19-10.  This final step where the device url is et to the ip with the PASSTHRU seems to connect everything.  Ugh. Annoying. 1 hr of my life goonnnnne!
 
+When using the printer via a USB cable: re-install the drivers and printer and make sure CUPS is up to date. Add printer via the localhost 631 and then choose the updated driver for the printer.  
+
+When printing select the printer with the garbage address for an ip -- the one with the numbers and stuff in the address bar seems to be the one that works.  Otherwise you get the "rendering completed" and nothing happens loop -- like the sent to printer nothing actually prints from the network thing.  IT seems to be a bug as it shows up 5 printers but only one (and the one you wouldn't think) appears to be the right one.  
+
 
 III.  Extra Fonts
 
